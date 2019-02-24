@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> Ellie View </title>
+    </head>
+    <h2> ELLIE BOT </h2>
+    <style>
+        .button:hover{
+            background-color: green;
+        }
+    </style>
+    <body onkeypress="return keyEvent(event)">
+        <p>
+        To move the robot camera, use the buttons "WASD" or you can click
+        the buttons.
+        </p>
+        <div> <center> <button class="button" onclick="wClick()">W</button></center>
+    </div>
+    <div><center>
+    <button class="button" onclick="aClick()">A</button>
+    <button class="button" onclick="sClick()">S</button>
+    <button class="button" onclick="dClick()">D</button>
+    </center>
+    </div>
+    <br>
+    <br>
+    <div> <center> <button class="button">↑</button></center>
+    </div>
+    <div><center>
+    <button class="button">←</button>
+    <button class="button">↓</button>
+    <button class="button">→</button>
+    </center>
+    </div>
+    <script>
+    	var x = 0, y = 0;
+
+        function keyEvent(e) {
+        	var key = String.fromCharCode(e.keyCode)
+            switch(key){
+                case 'w':
+                    wClick();
+                    break;
+                case 'a':
+                    aClick();
+                    break;
+                case 's':
+                    sClick();
+                    break;
+                case 'd':
+                    dClick();
+                    break;
+            }
+        }
+
+        function wClick() {
+            y += 10;
+            console.log(x + ':' + y);
+        }
+        function aClick() {
+            x -= 10;
+            console.log(x + ':' + y);
+        }
+        function sClick() {
+            y -= 10;
+            console.log(x + ':' + y);
+        }
+        function dClick() {
+            x += 10;
+            console.log(x + ':' + y);
+        }
+    </script>
+    </body>
+
+
+</html>
