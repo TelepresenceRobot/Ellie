@@ -3,18 +3,22 @@
     <head>
         <meta charset="utf-8">
         <title> Ellie View </title>
+
     </head>
-    <h2> ELLIE BOT </h2>
+    <h2> <center>ELLIE BOT </center></h2>
     <style>
         .button:hover{
             background-color: green;
         }
     </style>
     <body onkeypress="return keyEvent(event)">
-        <p>
+        <p><center>
         To move the robot camera, use the buttons "WASD" or you can click
         the buttons.
+        </center>
         </p>
+        <br>
+        <center><iframe width="600" height="355" src="https://www.youtube.com/embed/nl8o9PsJPAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
         <div> <center> <button class="button" onclick="wClick()">W</button></center>
     </div>
     <div><center>
@@ -35,6 +39,7 @@
     </div>
     <script>
     	var x = 0, y = 0;
+
         function keyEvent(e) {
         	var key = String.fromCharCode(e.keyCode)
             switch(key){
@@ -52,6 +57,7 @@
                     break;
             }
         }
+
         function wClick() {
             y += 10;
             console.log(x + ':' + y);
@@ -73,3 +79,4 @@
 
 
 </html>
+
